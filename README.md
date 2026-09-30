@@ -9,7 +9,7 @@ Projects are organized by cybersecurity domain.
 ## Domains
 
 ### Offensive / Penetration Testing
-- [Passive Reconnaissance and OSINT Lab](offensive-penetration-testing/passive-reconnaissance/)
+- [Performing Passive Reconnaissance Lab](offensive-penetration-testing/performing-passive-reconnaissance/)
 
 ### Defensive / SOC & Monitoring
 - Projects coming soon
