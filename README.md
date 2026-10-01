@@ -15,7 +15,7 @@ Projects are organized by cybersecurity domain.
 - Projects coming soon
 
 ### Network Security
-- Projects coming soon
+- [Exploring the Seven Domains of a Typical IT Infrastructure Lab](network-security/exploring-seven-domains-it-infrastructure/)
 
 ### Forensics & Incident Response
 - Projects coming soon
