@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 11.14 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 11.14</title>
+ 
+    </head>
+    <body>
+      <h1>Exercise 11.14 Letter Frequency Counter</h1>
+
+      <form id="letterCountForm">
+        <label for="inputText">Enter multiple lines of text:</label><br>
+        <textarea id="inputText" required></textarea><br><br>
+        <button type="submit">Count Letters</button>
+      </form>
+    
+      <h2>Exercise 11.14 Letter Frequency Table</h2>
+      <textarea id="outputText" readonly></textarea>
+    
+      <script>
+        document.getElementById("letterCountForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+    
+          const text = document.getElementById("inputText").value.toLowerCase();
+          const alphabet = "abcdefghijklmnopqrstuvwxyz";
+          const counts = new Array(26).fill(0);
+    
+          for (let i = 0; i < alphabet.length; i++) {
+            let currentChar = alphabet[i];
+            let pos = text.indexOf(currentChar);
+            while (pos !== -1) {
+              counts[i]++;
+              pos = text.indexOf(currentChar, pos + 1);
+            }
+          }
+    
+          let output = "Letter\tCount\n";
+          for (let i = 0; i < 26; i++) {
+            output += `${alphabet[i].toUpperCase()}\t${counts[i]}\n`;
+          }
+    
+          document.getElementById("outputText").value = output;
+        });
+      </script>    
+    </body>
+</html>

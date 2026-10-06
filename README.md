@@ -21,7 +21,7 @@ Projects are organized by cybersecurity domain.
 - Projects coming soon
 
 ### Coding / Scripting
-- Projects coming soon
+- [Introduction to Internet Applications Programming Exercises](coding-scripting/intro-to-internet-applications/)
 
 ### Cloud & Infrastructure
 - Projects coming soon

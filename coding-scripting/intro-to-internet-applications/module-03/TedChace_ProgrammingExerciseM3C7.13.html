@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 7.13 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 7.13</title>
+
+        <script type="text/javascript">
+         function createElements() {
+                document.writeln('<button onclick="calculateEarnings()">Calculate Earnings</button><br><br>');
+                document.writeln('<div id="result"></div>');
+            }
+
+            function calculateEarnings() {
+                var itemValues = [239.99, 129.75, 99.95, 350.89];
+                var baseSalary = 200;
+                var commissionRate = 0.09;
+                var totalSales = 0;
+
+                var item1Sold = parseInt(prompt("Enter the number of Item 1 sold:"));
+                var item2Sold = parseInt(prompt("Enter the number of Item 2 sold:"));
+                var item3Sold = parseInt(prompt("Enter the number of Item 3 sold:"));
+                var item4Sold = parseInt(prompt("Enter the number of Item 4 sold:"));
+
+                totalSales = (item1Sold * itemValues[0]) + (item2Sold * itemValues[1]) + 
+                             (item3Sold * itemValues[2]) + (item4Sold * itemValues[3]);
+                             
+                var earnings = baseSalary + (totalSales * commissionRate);
+
+                var resultMessage = "<h3>Salesperson Earnings</h3>";
+                resultMessage += "Total Sales: $" + totalSales.toFixed(2) + "<br>";
+                resultMessage += "Earnings: $" + earnings.toFixed(2) + "<br>";
+                
+                document.writeln(resultMessage);
+            }
+
+            window.onload = createElements;
+        </script>
+    </head>
+    <body></body>
+</html>

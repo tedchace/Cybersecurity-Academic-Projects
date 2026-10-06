@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 13.3 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 13.3</title>
+        <style>
+            table {
+              border-collapse: collapse;
+            }
+            td {
+              width: 20px;
+              height: 20px;
+              border: 1px solid #ccc;
+            }
+          </style>
+          <script>
+            window.addEventListener("load", () => {
+              const tableBody = document.getElementById("tablebody");
+        
+              for (let i = 0; i < 30; i++) {
+                const row = tableBody.insertRow();
+                for (let j = 0; j < 30; j++) {
+                  const cell = row.insertCell();
+        
+                  cell.addEventListener("mousemove", (event) => {
+                    if (event.ctrlKey) {
+                      cell.style.backgroundColor = "blue";
+                    } else if (event.shiftKey) {
+                      cell.style.backgroundColor = "red";
+                    } else if (event.altKey) {
+                      cell.style.backgroundColor = "white";
+                    }
+                  });
+                }
+              }
+            });
+          </script>
+    </head>
+    <body>
+        <table id="canvas">
+            <caption>
+              Hold <em>Ctrl</em> (or <em>Control</em>) to draw blue. <br>
+              Hold <em>Shift</em> to draw red. <br>
+              Hold <em>Alt</em> to erase.
+            </caption>
+            <tbody id="tablebody"></tbody>
+          </table>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 6.18 -->
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 6.18</title>
+
+        <script type = "text/javascript">
+            var firstNumber;
+            var secondNumber;
+            var thirdNumber;
+            var number1;
+            var number2;
+            var number3;
+            var sum;
+            var average;
+            var product;
+            var smallest;
+            var largest;
+
+            firstNumber = window.prompt( "Enter first integer" );
+            secondNumber = window.prompt( "Enter second integer" );
+            thirdNumber = window.prompt( "Enter third integer" );
+
+            number1 = parseInt( firstNumber );
+            number2 = parseInt( secondNumber );
+            number3 = parseInt( thirdNumber );
+
+            sum = number1 + number2 + number3;
+            average = (number1 + number2 + number3)/3;
+            product = number1 * number2 * number3;
+            smallest = Math.min(number1, number2, number3);
+            largest = Math.max(number1, number2, number3);
+
+            window.alert( "The sum is " + sum + "\n" +
+                        "The average is " + average + "\n" + 
+                        "The product is " + product + "\n" + 
+                        "The smallest number is " + smallest + "\n" + 
+                        "The largest number is " + largest );
+        </script>
+    </head>
+    <body></body>
+</html>

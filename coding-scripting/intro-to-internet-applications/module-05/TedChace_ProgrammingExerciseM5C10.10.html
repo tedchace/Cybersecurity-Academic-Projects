@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 10.10 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 10.10</title>
+        <style>
+            body {
+              font-family: Arial, sans-serif;
+              padding: 20px;
+            }
+            .range {
+              margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>10.10 Salary Calculator</h1>
+
+        <form id="salesForm">
+          <label for="salesInput">Enter gross sales (comma-separated):</label><br>
+          <input type="text" id="salesInput" size="60" placeholder="Example: 5000,2500,8000"><br><br>
+          <button type="submit">Calculate Salaries</button>
+        </form>
+      
+        <div class="range" id="output"></div>
+      
+        <script>
+          document.getElementById("salesForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+      
+            const salaryRanges = new Array(9).fill(0);
+      
+            const salesValues = document.getElementById("salesInput").value
+              .split(",")
+              .map(s => parseFloat(s.trim()))
+              .filter(s => !isNaN(s));
+      
+            salesValues.forEach(sale => {
+              let salary = 200 + (0.09 * sale);
+              let salaryInt = Math.floor(salary);
+      
+              if (salaryInt >= 1000) {
+                salaryRanges[8]++;
+              } else {
+                let index = Math.floor((salaryInt - 200) / 100);
+                if (index >= 0 && index < 8) {
+                  salaryRanges[index]++;
+                }
+              }
+            });
+      
+            const rangeLabels = [
+              "$200–299", "$300–399", "$400–499", "$500–599",
+              "$600–699", "$700–799", "$800–899", "$900–999", "$1000 and over"
+            ];
+      
+            let outputHTML = "<h2>Salary Distribution</h2><ul>";
+            for (let i = 0; i < salaryRanges.length; i++) {
+              outputHTML += `<li>${rangeLabels[i]}: <strong>${salaryRanges[i]}</strong></li>`;
+            }
+            outputHTML += "</ul>";
+      
+            document.getElementById("output").innerHTML = outputHTML;
+          });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 3.6 -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Exercise 3.6 </title>
+</head>
+
+<body>
+    <h1>Website Registration Form With Optional Survey</h1>
+    
+    <!-- Website Registration Form -->
+    <form action="#" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Optional Survey -->
+        <details>
+            <summary>Optional Survey Question</summary>
+            <label for="year">What is your year in college?</label>
+            <select id="year" name="year">
+                <option value="" selected disabled>Choose an option</option>
+                <option value="Freshman">Freshman</option>
+                <option value="Sophomore">Sophomore</option>
+                <option value="Junior">Junior</option>
+                <option value="Senior">Senior</option>
+            </select>
+        </details><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

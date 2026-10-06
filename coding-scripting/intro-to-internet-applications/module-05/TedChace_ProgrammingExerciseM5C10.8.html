@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 10.8 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 10.8</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+          }
+          h2 {
+            color: #333;
+          }
+          .task {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+          }
+        </style>
+    </head>
+    <body>
+      <h1>10.8 Array Tasks</h1>
+
+      <div class="task" id="task1"></div>
+      <div class="task" id="task2"></div>
+      <div class="task" id="task3"></div>
+      <div class="task" id="task4"></div>
+      <div class="task" id="task5"></div>
+      <script>
+        let f = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        document.getElementById("task1").innerHTML =
+          "<h2>Task 1</h2>7th element of array f: <strong>" + f[6] + "</strong>";
+    
+
+        let g = new Array(5).fill(8);
+        document.getElementById("task2").innerHTML =
+          "<h2>Task 2</h2>Array g: <strong>" + g.join(", ") + "</strong>";
+    
+
+        let c = Array.from({ length: 100 }, (_, i) => i + 1);
+        let total = c.reduce((sum, value) => sum + value, 0);
+        document.getElementById("task3").innerHTML =
+          "<h2>Task 3</h2>Total of array c: <strong>" + total + "</strong>";
+    
+
+        let a = Array.from({ length: 11 }, (_, i) => i + 1);
+        let b = new Array(34).fill(0);
+        for (let i = 0; i < a.length; i++) {
+          b[i] = a[i];
+        }
+        document.getElementById("task4").innerHTML =
+          "<h2>Task 4</h2>Array b after copying a: <strong>" + b.join(", ") + "</strong>";
+    
+
+        let w = Array.from({ length: 99 }, () => Math.random() * 100);
+        let min = Math.min(...w);
+        let max = Math.max(...w);
+        document.getElementById("task5").innerHTML =
+          "<h2>Task 5</h2>Smallest value in w: <strong>" + min.toFixed(2) + "</strong><br>" +
+          "Largest value in w: <strong>" + max.toFixed(2) + "</strong>";
+      </script>
+    </body>
+</html>

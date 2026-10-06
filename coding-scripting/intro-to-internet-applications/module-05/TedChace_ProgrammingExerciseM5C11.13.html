@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 11.13 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 11.13</title>
+        <style>
+            body {
+              font-family: Arial, sans-serif;
+              padding: 20px;
+            }
+            textarea {
+              width: 100%;
+              height: 150px;
+            }
+            input[type="text"] {
+              width: 50px;
+            }
+          </style>
+    </head>
+    <body>
+        <h1>Exercise 11.13</h1>
+
+        <form id="charCountForm">
+          <label for="textInput">Enter multiple lines of text:</label><br>
+          <textarea id="textInput" required></textarea><br><br>
+      
+          <label for="charInput">Enter a character to search for:</label><br>
+          <input type="text" id="charInput" maxlength="1" required><br><br>
+      
+          <button type="submit">Count</button>
+        </form>
+      
+        <div id="output" style="margin-top: 20px;"></div>
+      
+        <script>
+          document.getElementById("charCountForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+      
+            const text = document.getElementById("textInput").value;
+            const char = document.getElementById("charInput").value;
+      
+            if (char.length !== 1) {
+              document.getElementById("output").innerHTML = "<strong>Please enter exactly one character.</strong>";
+              return;
+            }
+      
+            let count = 0;
+            let pos = text.indexOf(char);
+      
+            while (pos !== -1) {
+              count++;
+              pos = text.indexOf(char, pos + 1);
+            }
+      
+            document.getElementById("output").innerHTML = 
+              `The character "<strong>${char}</strong>" appears <strong>${count}</strong> time(s) in the text.`;
+          });
+        </script>
+    </body>
+</html>

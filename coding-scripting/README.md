@@ -3,4 +3,4 @@
 This is the Folder for Coding / Scripting Academic Projects
 
 ## Projects:
-- Projects coming soon
+- [Intro to Internet Applications Programming Exercises](coding-scripting/intro-to-internet-applications/)

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 9.17 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 9.17</title>
+
+        <script>
+            function start() {
+                document.getElementById("toCelsius").addEventListener("click", convertToCelsius, false);
+                document.getElementById("toFahrenheit").addEventListener("click", convertToFahrenheit, false);
+            }
+    
+            function celsius(fahrenheit) {
+                return (5.0 / 9.0) * (fahrenheit - 32);
+            }
+    
+            function fahrenheit(celsius) {
+                return (9.0 / 5.0) * celsius + 32;
+            }
+    
+            function convertToCelsius() {
+                var fInput = parseFloat(document.getElementById("fahrenheitField").value);
+                var result = document.getElementById("result");
+    
+                if (isNaN(fInput)) {
+                    result.innerHTML = "Please enter a valid Fahrenheit temperature.";
+                } else {
+                    var c = celsius(fInput);
+                    result.innerHTML = fInput + "°F is " + c.toFixed(2) + "°C";
+                }
+            }
+    
+            function convertToFahrenheit() {
+                var cInput = parseFloat(document.getElementById("celsiusField").value);
+                var result = document.getElementById("result");
+    
+                if (isNaN(cInput)) {
+                    result.innerHTML = "Please enter a valid Celsius temperature.";
+                } else {
+                    var f = fahrenheit(cInput);
+                    result.innerHTML = cInput + "°C is " + f.toFixed(2) + "°F";
+                }
+            }
+    
+            window.addEventListener("load", start, false);
+        </script>
+
+    </head>
+    <body>
+
+        <h2>Temperature Conversion</h2>
+        <form action="#">
+            <p>
+                <label>Fahrenheit:
+                    <input id="fahrenheitField" type="number" step="any">
+                </label>
+                <input id="toCelsius" type="button" value="Convert to Celsius">
+            </p>
+            <p>
+                <label>Celsius:
+                    <input id="celsiusField" type="number" step="any">
+                </label>
+                <input id="toFahrenheit" type="button" value="Convert to Fahrenheit">
+            </p>
+        </form>
+        <p id="result"></p>
+        
+    </body>
+</html>

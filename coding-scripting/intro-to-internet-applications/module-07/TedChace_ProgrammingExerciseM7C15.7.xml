@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="TedChace_ProgrammingExerciseM7C15.9.xsl"?>
+
+<!-- Programming Exercise 15.7 "nutrition.xml" -->
+<nutritionFacts>
+  <productName>Grandma White’s Cookies</productName>
+  <serving>
+    <servingSize>1 package</servingSize>
+    <calories>260</calories>
+    <fatCalories>100</fatCalories>
+  </serving>
+  <nutrients>
+    <totalFat>11</totalFat>
+    <saturatedFat>2</saturatedFat>
+    <cholesterol>5</cholesterol>
+    <sodium>210</sodium>
+    <totalCarbohydrates>36</totalCarbohydrates>
+    <fiber>2</fiber>
+    <sugars>15</sugars>
+    <protein>5</protein>
+  </nutrients>
+</nutritionFacts>

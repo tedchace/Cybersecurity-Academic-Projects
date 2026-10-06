@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 7.12 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 7.12</title>
+
+        <script type="text/javascript">
+            var accountNumber;
+            var beginningBalance;
+            var totalCharges;
+            var totalCredits;
+            var creditLimit;
+            var newBalance;
+            var resultMessage;
+
+            accountNumber = prompt("Enter account number:");
+            beginningBalance = parseFloat(prompt("Enter balance at beginning of month:"));
+            totalCharges = parseFloat(prompt("Enter total of all items charged this month:"));
+            totalCredits = parseFloat(prompt("Enter total of all credits this month:"));
+            creditLimit = parseFloat(prompt("Enter allowed credit limit:"));
+
+            newBalance = beginningBalance + totalCharges - totalCredits;
+
+            resultMessage = "Account Number: " + accountNumber + "<br>" + "New Balance: " + newBalance.toFixed(2) + "<br>";
+
+            if (newBalance > creditLimit) {
+                resultMessage += "<strong>Credit limit exceeded.</strong>";
+            }
+
+            document.writeln(resultMessage);
+        </script>
+    </head>
+    <body></body>
+</html>

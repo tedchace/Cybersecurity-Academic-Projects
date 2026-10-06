@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- Programming Exercise 9.7 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 9.7</title>
+
+        <script>
+            function start() {
+                var button = document.getElementById("calculateButton");
+                button.addEventListener("click", displayArea, false);
+            }
+            function displayArea() {
+                var inputField = document.getElementById("radiusField");
+                var radius = parseFloat(inputField.value);
+                var result = document.getElementById("result");
+    
+                if (isNaN(radius) || radius < 0) {
+                    result.innerHTML = "Please enter a valid non-negative number.";
+                } else {
+                    result.innerHTML = "Circle area is: " + circleArea(radius).toFixed(2);
+                }
+            }
+            function circleArea(radius) {
+                return Math.PI * Math.pow(radius, 2);
+            }
+            window.addEventListener("load", start, false);
+        </script>
+
+    </head>
+    <body>
+
+        <form action="#">
+            <p>
+                <label>Radius:
+                    <input id="radiusField" type="number" min="0">
+                </label>
+                <input id="calculateButton" type="button" value="Calculate">
+            </p>
+        </form>
+        <p id="result"></p>
+        
+    </body>
+</html>
