@@ -58,7 +58,7 @@ The exercises progressed from basic document structure and hyperlinks into HTML5
 - Select menus
 - HTML5 `<details>`, `<summary>`, `<meter>`, and `<mark>` elements
 
-**Exercises:**
+**Programming Exercise Files:**
 - [Exercise 2.3](module-01/TedChace_ProgrammingExerciseM1C2.3.html) - Basic HTML document structure
 - [Exercise 2.8](module-01/TedChace_ProgrammingExerciseM1C2.8.html) - Ordered lists and external hyperlinks
 - [Exercise 3.5](module-01/TedChace_ProgrammingExerciseM1C3.5.html) - HTML5 elements and form controls
