@@ -22,6 +22,7 @@ Projects are organized by cybersecurity domain.
 
 ### Coding / Scripting
 - [Introduction to Internet Applications Programming Exercises](coding-scripting/intro-to-internet-applications/)
+- [TLAN Interactive Training Application](coding-scripting/tlan-interactive-training/)
 
 ### Cloud & Infrastructure
 - Projects coming soon
