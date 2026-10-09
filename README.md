@@ -18,7 +18,7 @@ Projects are organized by cybersecurity domain.
 - [Exploring the Seven Domains of a Typical IT Infrastructure Lab](network-security/exploring-seven-domains-it-infrastructure/)
 
 ### Forensics & Incident Response
-- Projects coming soon
+- [Digital Forensics Investigation](forensics-incident-response/digital-forensics-investigation/)
 
 ### Coding / Scripting
 - [Introduction to Internet Applications Programming Exercises](coding-scripting/intro-to-internet-applications/)
