@@ -10,6 +10,7 @@ Projects are organized by cybersecurity domain.
 
 ### Offensive / Penetration Testing
 - [Performing Passive Reconnaissance Lab](offensive-penetration-testing/performing-passive-reconnaissance/)
+- [Assessing Common Attack Vectors Lab](offensive-penetration-testing/assessing-common-attack-vectors/)
 
 ### Defensive / SOC & Monitoring
 - Projects coming soon
