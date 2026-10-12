@@ -16,6 +16,7 @@ Projects are organized by cybersecurity domain.
 
 ### Network Security
 - [Exploring the Seven Domains of a Typical IT Infrastructure Lab](network-security/exploring-seven-domains-it-infrastructure/)
+- [Performing a Vulnerability Assessment Lab](network-security/performing-vulnerability-assessment/)
 
 ### Forensics & Incident Response
 - [Digital Forensics Investigation](forensics-incident-response/digital-forensics-investigation/)
